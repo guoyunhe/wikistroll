@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<title>Wikipedia Navigation</title>
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="css/bootstrap-theme.min.css" type="text/css" />
+<link rel="stylesheet" href="css/user-interface.css" type="text/css" />
+</head>
+<body>
+
+<div id="cloud-wrapper">
+	<span id="page"></span>
+	<div id="cloud"></div>
+	<button id="left-button" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span></button>
+	<button id="right-button" class="btn btn-default"><span class="glyphicon glyphicon-arrow-right"></span></button>
+	<button id="top-button" class="btn btn-default"><span class="glyphicon glyphicon-arrow-up"></span></button>
+	<button id="bottom-button" class="btn btn-default"><span class="glyphicon glyphicon-arrow-down"></span></button>
+	<button id="remap-button" class="btn btn-default"><span class="glyphicon glyphicon-repeat"></span></button>
+	<div id="navi-button-group" class="btn-group btn-group-sm" style="display:none;">
+		<button id="return-button" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span> Back</button>
+		<button id="home-button" class="btn btn-default"><span class="glyphicon glyphicon-home"></span> Home</button>
+		<button id="history-button" class="btn btn-default"><span class="glyphicon glyphicon-time"></span> History</button>
+	</div>
+	<div id="search-input-group" class="input-group">
+		<input id="search-input" type="search" class="form-control" placeholder="Search...">
+		<span class="input-group-btn">
+			<button id="search-button" class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+		</span>
+	</div><!-- /input-group -->
+</div>
+<div id="article">
+	<iframe width="100%" height="100%"></iframe>
+</div>
+
+<!-- Load JavaScript -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/mediawiki.js"></script>
+<script src="js/user-interface.js"></script>
+</body>
+</html>
