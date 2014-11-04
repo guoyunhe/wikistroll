@@ -4,7 +4,14 @@ var originalPage = 'Design';
 $(function(){
 	relayout();
 	
-	$( "#cloud" ).draggable({ cursor: 'move' });
+	$( "#cloud" ).draggable({
+		start: function(event, ui) {
+			$(this).addClass('drag');
+		},
+		stop: function(event, ui) {
+			$(this).removeClass('drag');
+		}
+	});
 	
 	navigate();
 	
@@ -130,10 +137,10 @@ function getLinksQuery( query) {
 			$( ".link" ).draggable({
 				start: function(event, ui) {
 					$(this).addClass('noclick');
-					$(this).css('transition', 'none');
+					$(this).addClass('drag');
 				},
 				stop: function(event, ui) {
-					$(this).css('transition', '');
+					$(this).removeClass('drag');
 				}
 			});
 		}

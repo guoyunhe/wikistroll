@@ -20,7 +20,7 @@ body {
 
 #cloud-wrapper > button, #cloud-wrapper > div.btn-group {
 	position: absolute;
-	z-index: 3;
+	z-index: 2;
 }
 
 #left-button {
@@ -55,23 +55,29 @@ body {
 #navi-button-group {
 	left: 10px;
 	bottom: 10px;
+	z-index: 2;
 }
 
 #search-input-group {
 	left: 10px;
 	top: 10px;
 	width: 300px;
+	z-index: 2;
 }
 
 #cloud {
 	position: absolute;
-}
-
-#cloud {
 	height: 100%;
 	width: 100%;
 	left: 0;
 	top: 0;
+	cursor: grab;
+	transition: left 1s, top 1s;
+}
+
+#cloud.drag {
+	cursor: grabbing;
+	transition: none;
 }
 
 .link {
@@ -97,11 +103,16 @@ body {
 }
 
 .link:hover {
-	z-index: 2;
+	z-index: 1;
 	border: 1px solid black;
 	width: 98px;
 	height: 98px;
 	opacity: 1;
+}
+
+.link.drag {
+	transition: none;
+	cursor: grabbing;
 }
 
 #article {
